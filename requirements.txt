@@ -1,4 +1,4 @@
-Django==4
+Django==3.0
 gunicorn
 whitenoise
 django-cors-headers
