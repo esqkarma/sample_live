@@ -32,8 +32,7 @@ def getmessage(request):
 
     return JsonResponse({'status': 'ok', 'data': message_list})
 
-
-from datetime import datetime
+from django.utils import timezone
 @csrf_exempt
 def sendmessage(request):
     try:
@@ -44,7 +43,7 @@ def sendmessage(request):
 
         obj = Chat()
         obj.message = message
-        obj.dateTime = datetime.now()
+        obj.dateTime = timezone.now()   # ✅ FIXED
         obj.save()
 
         return JsonResponse({'status': 'ok'})
