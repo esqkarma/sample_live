@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import *
 
 # Create your views here.
 
+@csrf_exempt
 def addproduct_get(request):
     if request.method == 'POST':
         name = request.POST['name']
