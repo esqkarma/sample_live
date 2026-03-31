@@ -13,5 +13,5 @@ def home(request):
 
 urlpatterns = [
     path('', home),
-    path('/add_product/', views.addproduct_get),
+    path('add_product/', views.addproduct_get),
 ]
