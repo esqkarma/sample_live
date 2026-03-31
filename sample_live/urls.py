@@ -5,9 +5,13 @@ from django.urls import path
 from django.http import HttpResponse
 from django.urls import path
 
+from myapp import views
+
+
 def home(request):
     return HttpResponse("Server is running bro 🚀")
 
 urlpatterns = [
-    path('', home),   # 👈 ADD THIS
+    path('', home),
+    path('/add_product/', views.addproduct_get),
 ]
