@@ -15,5 +15,5 @@ urlpatterns = [
     path('', home),
     path('add_product/', views.addproduct_get),
     path('getmessage/', views.getmessage),
-    path('sendmessage/', views.getmessage),
+    path('sendmessage/', views.sendmessage),
 ]
